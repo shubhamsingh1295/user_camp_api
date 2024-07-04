@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 
+  host: localhost
+
+development:
+  <<: *default
+  database: user_camp_dev
+
+test:
+  <<: *default
+  database: user_camp_test
+
+production:
+  <<: *default
+  database: user_camp_prod
+  username: mysql
+  password: 
